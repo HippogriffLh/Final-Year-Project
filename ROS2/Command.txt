@@ -38,3 +38,6 @@ ros2 launch two_wheeled_robot room_world_v1.launch.py slam:=True
 ros2 launch explore_lite explore.launch.py
 # 含有初始探索
 ros2 launch explore_lite explore_with_init.launch.py
+
+# 保存地图
+ros2 run nav2_map_server map_saver_cli -f my_map
