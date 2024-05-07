@@ -1,7 +1,6 @@
-# Author: Addison Sears-Collins
-# Date: September 23, 2021
+# Author: Zeren ZHOU
+# Date: April 01, 2024
 # Description: Load a URDF and world file into Gazebo.
-# https://automaticaddison.com
 
 import os
 from launch import LaunchDescription

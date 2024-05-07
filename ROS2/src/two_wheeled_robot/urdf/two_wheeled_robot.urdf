@@ -78,7 +78,6 @@
     </collision>
 
     <xacro:box_inertia m="40.0" w="${base_width}" d="${base_length}" h="${base_height}"/>
-    
   </link>
 
   <gazebo reference="base_link">
@@ -86,7 +85,6 @@
   </gazebo>
 
   <!-- *********************** DRIVE WHEELS ******************************  -->
-
   <xacro:macro name="wheel" params="prefix x_reflect y_reflect">
     <link name="${prefix}_link">
       <visual>
@@ -150,21 +148,20 @@
     <xacro:sphere_inertia m="10.05" r="${(wheel_radius+wheel_zoff-(base_height/2))}"/>
   </link>
 
-  <gazebo reference="front_caster">
-    <mu1>0.01</mu1>
-    <mu2>0.01</mu2>
-    <material>Gazebo/White</material>
-  </gazebo>
-
   <joint name="caster_joint" type="fixed">
     <parent link="base_link"/>
     <child link="front_caster"/>
     <origin xyz="${caster_xoff} 0.0 ${-(base_height/2)}" rpy="0 0 0"/>
   </joint>
+
+  <gazebo reference="front_caster">
+    <mu1>0.01</mu1>
+    <mu2>0.01</mu2>
+    <material>Gazebo/White</material>
+  </gazebo>
   
   <!-- *********************** IMU SETUP *********************************  -->
   <!-- Each sensor must be attached to a link.                              --> 
-  
   <joint name="imu_joint" type="fixed">
     <parent link="base_link"/>
     <child link="imu_link"/>

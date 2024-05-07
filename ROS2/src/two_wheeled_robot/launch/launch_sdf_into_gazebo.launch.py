@@ -1,7 +1,6 @@
-# Author: Addison Sears-Collins
-# Date: September 27, 2021
+# Author: Zeren ZHOU
+# Date: April 01, 2024
 # Description: Load an SDF and world file into Gazebo.
-# https://automaticaddison.com
 
 import os
 from launch import LaunchDescription

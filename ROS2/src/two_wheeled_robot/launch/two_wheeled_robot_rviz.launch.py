@@ -1,7 +1,6 @@
-# Author: Addison Sears-Collins
-# Date: September 14, 2021
+# Author: Zeren ZHOU
+# Date: April 01, 2024
 # Description: Launch a two-wheeled robot URDF file using Rviz.
-# https://automaticaddison.com
 
 import os
 from launch import LaunchDescription
