@@ -1,7 +1,7 @@
 image: room_2_world.pgm
 mode: trinary
 resolution: 0.05
-origin: [-1.18, -1.14, 0]
+origin: [-1.17, -1.14, 0]
 negate: 0
 occupied_thresh: 0.65
 free_thresh: 0.25

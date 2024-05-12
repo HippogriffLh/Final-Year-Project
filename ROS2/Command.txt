@@ -31,7 +31,13 @@ ros2 launch wheeled_robot_sim launch_urdf_into_gazebo.launch.py world:=~/dev_ws/
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 
 # 建图启动
-ros2 launch two_wheeled_robot room_world_v1.launch.py slam:=True
+ros2 launch two_wheeled_robot room_1_world_v1.launch.py slam:=True
+ros2 launch two_wheeled_robot room_2_world_v1.launch.py slam:=True
+ros2 launch two_wheeled_robot room_3_world_v1.launch.py slam:=True
+
+# 路径跟随
+ros2 launch two_wheeled_robot room_3_world_v1.launch.py
+ros2 run nav_along_paths nav_along_paths
 
 # 自主探索（explore_lite）
 # 没有初始探索
